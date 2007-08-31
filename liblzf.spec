@@ -1,7 +1,7 @@
 %define rname lzf
 %define name lib%{rname}
 %define version 2.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define common_description LZF is an extremely fast (not that much slower than a pure memcpy) \
 compression algorithm. It is ideal for applications where you want to \
@@ -63,5 +63,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_includedir}/%{rname}.h
 %{_libdir}/%{name}.a
-
-
