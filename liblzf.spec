@@ -16,7 +16,6 @@ Source0: %{name}-%{version}.tar.bz2
 License: BSD
 Group: System/Libraries
 Url: http://liblzf.plan9.de/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 %{common_description}
