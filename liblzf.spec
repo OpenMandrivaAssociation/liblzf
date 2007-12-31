@@ -1,28 +1,26 @@
 %define rname lzf
-%define name lib%{rname}
-%define version 2.0
-%define release %mkrel 2
 
 %define common_description LZF is an extremely fast (not that much slower than a pure memcpy) \
 compression algorithm. It is ideal for applications where you want to \
 save *some* space but not at the cost of speed. It is ideal for \
 repetitive data as well. The module is self-contained and very small.
 
-Summary: Very small data compression library
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: %{name}-%{version}.tar.bz2
-License: BSD
-Group: System/Libraries
-Url: http://liblzf.plan9.de/
+Summary:	Very small data compression library
+Name:		lib%{rname}
+Version:	3.1
+Release:	%mkrel 1
+License:	BSD
+Group:		System/Libraries
+Url:		http://liblzf.plan9.de/
+Source0:	http://www.goof.com/pcg/marc/data/%{name}-%{version}.tar.bz2
+Patch0:		liblzf-3.1-makefile.patch
 
 %description
 %{common_description}
 
 %package -n %{rname}
-Summary: Tools for the %{rname} compression library
-Group: Archiving/Compression
+Summary:	Tools for the %{rname} compression library
+Group:		Archiving/Compression
 
 %description -n	%{rname}
 %{common_description}
@@ -30,9 +28,9 @@ Group: Archiving/Compression
 This package contains tools for the %{rname} library.
 
 %package -n %{name}-devel
-Summary: Development tools for the %{rname} compression library
-Group: Development/C
-Provides: %{rname}-devel
+Summary:	Development tools for the %{rname} compression library
+Group:		Development/C
+Provides:	%{rname}-devel
 
 %description -n	%{name}-devel
 %{common_description}
@@ -42,14 +40,15 @@ developing programs using the %{rname} library.
 
 %prep
 %setup -q
-%configure2_5x
+%patch0 -p1
 
 %build
+%configure2_5x
 %make
 
 %install
 rm -rf %{buildroot}
-%makeinstall
+%makeinstall_std
 
 %clean
 rm -rf %{buildroot}
