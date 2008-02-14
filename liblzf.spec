@@ -11,6 +11,7 @@ Version:	3.1
 Release:	%mkrel 1
 License:	BSD
 Group:		System/Libraries
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Url:		http://liblzf.plan9.de/
 Source0:	http://www.goof.com/pcg/marc/data/%{name}-%{version}.tar.bz2
 Patch0:		liblzf-3.1-makefile.patch
