@@ -8,7 +8,7 @@ repetitive data as well. The module is self-contained and very small.
 Summary:	Very small data compression library
 Name:		lib%{rname}
 Version:	3.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	BSD
 Group:		System/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
