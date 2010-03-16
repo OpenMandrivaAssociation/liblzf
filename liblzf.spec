@@ -8,7 +8,7 @@ repetitive data as well. The module is self-contained and very small.
 Summary:	Very small data compression library
 Name:		lib%{rname}
 Version:	3.4
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	BSD
 Group:		System/Libraries
 URL:		http://liblzf.plan9.de/
