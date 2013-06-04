@@ -65,9 +65,10 @@ sh ./bootstrap.sh
 %{_bindir}/%{rname}
 
 %files -n %{libname}
-%{_libdir}/%{name}.so.%{major}
+%{_libdir}/%{name}.so.%{major}*
 
 %files -n %{devname}
 %{_includedir}/%{rname}.h
 %{_libdir}/%{name}.so
+%{_libdir}/pkgconfig/liblzf.pc
 
