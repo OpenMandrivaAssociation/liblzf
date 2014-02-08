@@ -6,7 +6,7 @@
 Summary:	Very small data compression library
 Name:		liblzf
 Version:	3.6
-Release:	2
+Release:	3
 License:	BSD
 Group:		System/Libraries
 Url:		http://liblzf.plan9.de/
