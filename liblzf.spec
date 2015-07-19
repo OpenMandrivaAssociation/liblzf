@@ -53,7 +53,9 @@ developing programs using the %{rname} library.
 sh ./bootstrap.sh
 
 %build
-%configure2_5x \
+touch NEWS AUTHORS ChangeLog
+
+%configure \
 	--disable-static
 %make
 
