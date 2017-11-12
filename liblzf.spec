@@ -1,12 +1,12 @@
-%define rname	lzf
-%define major	1
+%define rname lzf
+%define major 1
 %define libname	%mklibname %{rname} %{major}
 %define devname	%mklibname %{rname} -d
 
 Summary:	Very small data compression library
 Name:		liblzf
 Version:	3.6
-Release:	11
+Release:	12
 License:	BSD
 Group:		System/Libraries
 Url:		http://liblzf.plan9.de/
@@ -53,6 +53,7 @@ developing programs using the %{rname} library.
 sh ./bootstrap.sh
 
 %build
+%global optflags %{optflags} -Ofast
 touch NEWS AUTHORS ChangeLog
 
 %configure \
