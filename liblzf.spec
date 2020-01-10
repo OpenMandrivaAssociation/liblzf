@@ -49,7 +49,7 @@ developing programs using the %{rname} library.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 sh ./bootstrap.sh
 
 %build
