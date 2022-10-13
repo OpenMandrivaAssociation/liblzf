@@ -1,0 +1,23 @@
+diff -up liblzf-3.6/lzf.h.omv~ liblzf-3.6/lzf.h
+--- liblzf-3.6/lzf.h.omv~	2022-10-13 18:29:41.718890194 +0200
++++ liblzf-3.6/lzf.h	2022-10-13 18:30:36.476139952 +0200
+@@ -37,6 +37,10 @@
+ #ifndef LZF_H
+ #define LZF_H
+ 
++#ifdef __cplusplus
++extern "C" {
++#endif
++
+ /***********************************************************************
+ **
+ **	lzf -- an extremely fast/free compression/decompression-method
+@@ -96,5 +100,8 @@ unsigned int
+ lzf_decompress (const void *const in_data,  unsigned int in_len,
+                 void             *out_data, unsigned int out_len);
+ 
++#ifdef __cplusplus
++} // extern "C"
+ #endif
+ 
++#endif

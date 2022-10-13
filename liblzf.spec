@@ -6,7 +6,7 @@
 Summary:	Very small data compression library
 Name:		liblzf
 Version:	3.6
-Release:	14
+Release:	15
 License:	BSD
 Group:		System/Libraries
 Url:		http://liblzf.plan9.de/
@@ -15,6 +15,9 @@ Patch0:		liblzf-3.1-makefile.patch
 Patch1:		liblzf-3.4-LDFLAGS.diff
 # MD from fedora makes a proper shared lib
 Patch2:		liblzf-3.6-autoconf.patch
+# Add extern "C" in the header to make the library "just work"
+# inside C++ applications (VirtualBox)
+Patch3:		liblzf-3.6-c++.patch
 
 %description
 LZF is an extremely fast (not that much slower than a pure memcpy)
@@ -48,8 +51,7 @@ This package contains the header files and libraries needed for
 developing programs using the %{rname} library.
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 sh ./bootstrap.sh
 
 %build
@@ -58,10 +60,10 @@ touch NEWS AUTHORS ChangeLog
 
 %configure \
 	--disable-static
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files -n %{rname}
 %doc README
