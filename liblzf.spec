@@ -9,7 +9,7 @@ Version:	3.6
 Release:	16
 License:	BSD
 Group:		System/Libraries
-Url:		http://liblzf.plan9.de/
+Url:		https://liblzf.plan9.de/
 Source0:	http://dist.schmorp.de/liblzf/%{name}-%{version}.tar.gz
 Patch0:		liblzf-3.1-makefile.patch
 Patch1:		liblzf-3.4-LDFLAGS.diff
