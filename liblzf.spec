@@ -19,6 +19,11 @@ Patch2:		liblzf-3.6-autoconf.patch
 # inside C++ applications (VirtualBox)
 Patch3:		liblzf-3.6-c++.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 LZF is an extremely fast (not that much slower than a pure memcpy)
 compression algorithm. It is ideal for applications where you want to
